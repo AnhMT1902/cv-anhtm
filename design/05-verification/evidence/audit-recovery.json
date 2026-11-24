@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "taskId": "AUDIT-RECOVERY-20261120",
+  "generatedAt": "2026-11-20T10:50:38.940Z",
+  "scope": {
+    "changedFiles": [
+      "scripts/ai-audit/prepare-hooks.mjs",
+      "scripts/ai-audit/hooks.template.json",
+      ".codex/hooks.json",
+      "scripts/ai-audit/audit.mjs",
+      "scripts/ai-audit/hook.mjs",
+      "scripts/ai-audit/health.mjs",
+      "scripts/ai-audit/tests/audit.test.mjs",
+      "design/06-operations/ai-audit.md"
+    ],
+    "excluded": [
+      "application scaffolding",
+      "database",
+      "Docker deployment",
+      "global configuration or trust",
+      "live manual receipt creation",
+      "canary confirmation",
+      "skill/workflow implementation"
+    ]
+  },
+  "changes": [
+    "terminal-event timeout reduced to 3 seconds; other events remain 60 seconds",
+    "runtime status messages; review titles not guaranteed",
+    "metadata-only append-only hook health separate from audit receipts",
+    "health module included in audit fingerprint",
+    "narrow current-session health read allowlist",
+    "real-shell launcher and failure/privacy/containment regressions"
+  ],
+  "baseline": {
+    "elevated": {
+      "tests": 16,
+      "passed": 16,
+      "failed": 0
+    },
+    "sandbox": {
+      "passed": 15,
+      "failed": 1,
+      "cause": "EPERM spawning Node from temporary fixture"
+    }
+  },
+  "verification": {
+    "tests": 30,
+    "passed": 30,
+    "failed": 0,
+    "skipped": 0,
+    "syntaxChecks": 10,
+    "checksSha256": "b777908c96a9c0e10bac344a70fc18275e54c48daa7019878a507f2f28eddeef",
+    "tapSha256": "391af4bf684fd28dabb57dcc49ea732c7b55a5c591e198c2c8ee12b2215602f7",
+    "sourceSha256": {
+      "scripts/ai-audit/prepare-hooks.mjs": "b22a233fefc63df1301cc859ecedabd2f7f78c510b4c7d790462ef0b49297409",
+      "scripts/ai-audit/hooks.template.json": "087ddfe70a11f885eddfa0203b3e837b5358c4b11d5ef7b0b1d456a588229f5f",
+      ".codex/hooks.json": "087ddfe70a11f885eddfa0203b3e837b5358c4b11d5ef7b0b1d456a588229f5f",
+      "scripts/ai-audit/audit.mjs": "b54a8df28210bf56df2c1f349c793bfba66c332ae051d40d43c677ee3b6454e7",
+      "scripts/ai-audit/hook.mjs": "04c76fd7e541546949c8336713028693380d4239d6eebd0af787524c0bfae5de",
+      "scripts/ai-audit/health.mjs": "669ba460092e3d6ac99112832694332fe9b99b30b15aa3c7deb8811b7f6819eb",
+      "scripts/ai-audit/tests/audit.test.mjs": "aa8feecec609bca6a63ddb1fa82b6f10feaa376b94a5044b9a5cb9b1efcb660c",
+      "design/06-operations/ai-audit.md": "36cd7d301a1b4c810fba11869a6974fbcbb8b41ff691e36e238a92b197a8ef7b"
+    },
+    "configurationMatchesTemplate": true,
+    "runtime": {
+      "node": "v20.19.6",
+      "platform": "win32",
+      "architecture": "x64"
+    },
+    "review": "independent static review PASS; final suite run by main",
+    "playwright": "approved_not_applicable_no_application_UI",
+    "deployment": "not_performed",
+    "ubuntu": "not_tested",
+    "windowsContainment": "actual NTFS junctions including health output-file endpoint; ordinary Windows file symlinks not exercised; no claim of race-free containment"
+  },
+  "nativeReconciliation": {
+    "mode": "read_only_no_sync",
+    "observedRecords": 1586,
+    "observedVisibleEvents": 467,
+    "savedCheckpointPrefixMatched": true,
+    "blockingGaps": 0,
+    "pendingTailBytes": 0,
+    "automaticHookEvidence": false
+  },
+  "liveAuditAtInspection": {
+    "state": "pending_real_desktop_canary",
+    "updatedAt": "2026-11-20T08:54:19.370Z",
+    "recentHookReceipts": 0,
+    "canaryCandidates": [],
+    "automaticCaptureVerified": false,
+    "activationRootCause": "UNCONFIRMED; do not infer execution from approved hook hashes or enabled feature"
+  },
+  "preservation": {
+    "eventsSha256": "62677db13fc5a24c21d1f034f2dce89fbe1156b4c0547811e973f610ec7717af",
+    "manifestSha256": "d73a8e6c68174bf7afe02d5c567e2f75ae095d5a749c08f455e76b65bcd982a7",
+    "eventsUnchangedSincePretest": true,
+    "manifestUnchangedSincePretest": true,
+    "backupDirectory": "logs/ai/recovery/2026-11-20-hook-recovery",
+    "earlierFailedAttempt": "logs/ai/recovery/2026-11-20-hook-recovery/regression-attempt-1.tap",
+    "eventsDeleted": false,
+    "liveReceiptsManuallyCreated": false
+  },
+  "agents": [
+    {
+      "role": "design/runbook",
+      "sessionId": "01a1f87f-96d2-7c80-ae18-32c45711b787"
+    },
+    {
+      "role": "implementation",
+      "sessionId": "01a1f885-4a35-7d60-8d1d-6d5d02540933"
+    },
+    {
+      "role": "testing",
+      "sessionId": "01a1f885-81f2-78d2-86e7-474631ec5bcd"
+    },
+    {
+      "role": "independent review",
+      "sessionId": "01a1f889-9770-78d2-817a-94bb28162458"
+    }
+  ],
+  "remaining": [
+    "human review of changed hook definitions and host reload if needed",
+    "real desktop prompt/read-tool/final sequence and inspection next turn",
+    "explicit human approval and owner-run confirm-canary only after real evidence",
+    "pre-existing oversized-receipt and per-event-required-field limitations",
+    "freshness still requires agent inspection each turn",
+    "full child-transcript audit aggregation not implemented"
+  ],
+  "rollback": "Restore backed-up approved source/config originals, retain health/log/recovery evidence, leave new unreferenced health module if needed; re-review definitions and perform fresh canary, never copy trusted_hash or auto-confirm"
+}

@@ -1,0 +1,5 @@
+.jr-elegant { --jr-ink: #1d334c; --jr-paper: #fffefa; }
+.jr-elegant .jr-side { background: #e9f0f5; }
+.jr-elegant h1, .jr-elegant h2 { font-family: "Instrument Serif", Georgia, serif; font-weight: 500; }
+.jr-elegant h2 { font-size: 1.65rem; color: #234e6d; }
+.jr-elegant .jr-main article { border-inline-start: 1px solid #aebfcf; padding-inline-start: .9rem; }

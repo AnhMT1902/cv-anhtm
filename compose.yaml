@@ -1,0 +1,63 @@
+name: cv-project
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: apps/frontend/Dockerfile
+    environment:
+      CV_API_ORIGIN: http://backend:3001
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/').then(r => { if (!r.ok) process.exit(1) }).catch(() => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  backend:
+    build:
+      context: .
+      dockerfile: apps/backend/Dockerfile
+    environment:
+      CV_HOST: 0.0.0.0
+      PORT: "3001"
+      DATABASE_URL: postgresql://cv:${CV_DB_PASSWORD:?configure CV_DB_PASSWORD in .env}@database:5432/cv
+      CV_ADMIN_USERNAME: ${CV_ADMIN_USERNAME:-admin}
+      CV_ADMIN_PASSWORD_HASH: ${CV_ADMIN_PASSWORD_HASH:-}
+    depends_on:
+      database:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3001/api/public/cv').then(r => { if (!r.ok) process.exit(1) }).catch(() => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  database:
+    image: postgres:17-bookworm@sha256:837bed18782820fe967067cb5328b02b0d9992c1be9a37ee0c9c492cfc03af3b
+    environment:
+      POSTGRES_DB: cv
+      POSTGRES_USER: cv
+      POSTGRES_PASSWORD: ${CV_DB_PASSWORD:?configure CV_DB_PASSWORD in .env}
+    volumes:
+      - cv-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "cv", "-d", "cv"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  cv-data:
+
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: ${CV_DOCKER_SUBNET:-10.250.79.0/28}

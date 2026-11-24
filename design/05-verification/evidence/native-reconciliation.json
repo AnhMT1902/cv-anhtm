@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-11-20T08:54:19.508Z",
+  "sessionId": "01a1f48e-f0fe-7da3-90db-86359dc86993",
+  "sourceSnapshot": {
+    "root": "CODEX_HOME/sessions (or ~/.codex/sessions)",
+    "relativePath": "2026/11/19/rollout-2026-11-19T23-06-10-01a1f48e-f0fe-7da3-90db-86359dc86993.jsonl",
+    "snapshotSha256": "8cd756e931a983215cbeda65e31c8850f9678f0e7c345d9ce7750c324d8928ab",
+    "snapshotBytes": 3756649
+  },
+  "sourceRecordCount": 964,
+  "checkpoint": {
+    "bytes": 3756649,
+    "sha256": "8cd756e931a983215cbeda65e31c8850f9678f0e7c345d9ce7750c324d8928ab"
+  },
+  "firstSyncAdded": 13,
+  "secondSyncAdded": 0,
+  "eventCount": 276,
+  "uniqueEventIds": 276,
+  "counts": {
+    "lifecycle": 29,
+    "user_message": 19,
+    "assistant_message": 41,
+    "tool_call": 80,
+    "tool_result": 79,
+    "hosted_tool": 28
+  },
+  "gapCounts": {
+    "HOSTED_TOOL_OUTPUT_UNAVAILABLE": 28,
+    "SOURCE_OUTPUT_TRUNCATED": 13,
+    "TOOL_RESULT_NOT_YET_AVAILABLE": 1
+  },
+  "ingestionHealthy": true,
+  "coverageStatus": "available_with_gaps",
+  "installedHookMatchesTemplate": true,
+  "hookSha256": "2944b2a1ea0b658330b389d810bc128bbbc8f772d08beac6149afe0a83a53c8d",
+  "auditFingerprint": "ee040d94cf7bdcb643340861085ff9b65442456bccc9d76048aff7bc2ba15f32",
+  "activation": {
+    "state": "pending_real_desktop_canary",
+    "confirmedTurnId": null
+  },
+  "canaryCandidates": [],
+  "limitations": [
+    "Native source has unavailable hosted results and truncated outputs.",
+    "Current tool result and final answer are not available until emitted.",
+    "No real desktop hook canary has been confirmed.",
+    "Ubuntu and application UI are not tested."
+  ]
+}

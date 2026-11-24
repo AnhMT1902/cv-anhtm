@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-11-21T08:24:06.733Z",
+  "runtime": {
+    "node": "v20.19.6",
+    "platform": "win32",
+    "architecture": "x64"
+  },
+  "checks": [
+    {
+      "check": "node --check scripts\\ai-audit\\audit.mjs",
+      "passed": true
+    },
+    {
+      "check": "node --check scripts\\ai-audit\\check.mjs",
+      "passed": true
+    },
+    {
+      "check": "node --check scripts\\ai-audit\\cli.mjs",
+      "passed": true
+    },
+    {
+      "check": "node --check scripts\\ai-audit\\health.mjs",
+      "passed": true
+    },
+    {
+      "check": "node --check scripts\\ai-audit\\hook.mjs",
+      "passed": true
+    },
+    {
+      "check": "node --check scripts\\ai-audit\\paths.mjs",
+      "passed": true
+    },
+    {
+      "check": "node --check scripts\\ai-audit\\prepare-hooks.mjs",
+      "passed": true
+    },
+    {
+      "check": "node --check scripts\\ai-audit\\redact.mjs",
+      "passed": true
+    },
+    {
+      "check": "node --check scripts\\ai-audit\\source.mjs",
+      "passed": true
+    },
+    {
+      "check": "node --check scripts\\ai-audit\\tests\\audit.test.mjs",
+      "passed": true
+    },
+    {
+      "check": "node:test audit unit/integration suite",
+      "passed": true
+    }
+  ],
+  "sourceSha256": {
+    "scripts/ai-audit/audit.mjs": "b54a8df28210bf56df2c1f349c793bfba66c332ae051d40d43c677ee3b6454e7",
+    "scripts/ai-audit/check.mjs": "8a550d55ec4066d50bf1e619be2c0dc43c189c65a1147ea8f5ee3bf11b43b75c",
+    "scripts/ai-audit/cli.mjs": "bbf8c63931d05c9bf9aa72bc2790caec0f1665e5f8314ce300b14bbd70b5dd30",
+    "scripts/ai-audit/health.mjs": "669ba460092e3d6ac99112832694332fe9b99b30b15aa3c7deb8811b7f6819eb",
+    "scripts/ai-audit/hook.mjs": "04c76fd7e541546949c8336713028693380d4239d6eebd0af787524c0bfae5de",
+    "scripts/ai-audit/paths.mjs": "03f32ed95c1260b702b2d01e819f8ac5bcedac77a4d4188da07c811ef7e76ff1",
+    "scripts/ai-audit/prepare-hooks.mjs": "b22a233fefc63df1301cc859ecedabd2f7f78c510b4c7d790462ef0b49297409",
+    "scripts/ai-audit/redact.mjs": "273b0ae87b2d34ea4d18d17d89666eb25c51cde0540ed145b6cdeb8625bef51f",
+    "scripts/ai-audit/source.mjs": "be191699c30c5d9adfb95fb56c57f993110306c81eb01b049207356f562fe828",
+    "scripts/ai-audit/tests/audit.test.mjs": "aa8feecec609bca6a63ddb1fa82b6f10feaa376b94a5044b9a5cb9b1efcb660c"
+  },
+  "testEvidenceSha256": "d53fae40373a78d35fcf63a7e59bc04f325e1a578cd96b83b642df04aff0c35f",
+  "playwright": "approved_not_applicable_no_application_UI",
+  "ubuntu": "not_run",
+  "desktopHookCanary": "not_verified_by_this_test_suite"
+}

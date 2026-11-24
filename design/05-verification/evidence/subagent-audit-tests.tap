@@ -1,0 +1,417 @@
+TAP version 13
+# Subtest: strict source identity remains strict while verified direct-child routing resolves separately
+ok 1 - strict source identity remains strict while verified direct-child routing resolves separately
+  ---
+  duration_ms: 76.0595
+  ...
+# Subtest: mapped child receipts stay in the child log and health preserves incoming host identity
+ok 2 - mapped child receipts stay in the child log and health preserves incoming host identity
+  ---
+  duration_ms: 113.035
+  ...
+# Subtest: parent confirmation does not authorize a child; child canary and confirmation are independent
+ok 3 - parent confirmation does not authorize a child; child canary and confirmation are independent
+  ---
+  duration_ms: 368.5039
+  ...
+# Subtest: child diagnostic access uses resolved identity and rejects shell composition
+ok 4 - child diagnostic access uses resolved identity and rejects shell composition
+  ---
+  duration_ms: 263.4447
+  ...
+# Subtest: child routing denies missing dispatch without recording successful receipts
+ok 5 - child routing denies missing dispatch without recording successful receipts
+  ---
+  duration_ms: 33.5344
+  ...
+# Subtest: child routing denies quoted user data without recording successful receipts
+ok 6 - child routing denies quoted user data without recording successful receipts
+  ---
+  duration_ms: 31.4915
+  ...
+# Subtest: child routing denies orphan result without recording successful receipts
+ok 7 - child routing denies orphan result without recording successful receipts
+  ---
+  duration_ms: 41.8079
+  ...
+# Subtest: child routing denies orphan call without recording successful receipts
+ok 8 - child routing denies orphan call without recording successful receipts
+  ---
+  duration_ms: 36.0557
+  ...
+# Subtest: child routing denies result before call without recording successful receipts
+ok 9 - child routing denies result before call without recording successful receipts
+  ---
+  duration_ms: 34.6169
+  ...
+# Subtest: child routing denies wrong tool without recording successful receipts
+ok 10 - child routing denies wrong tool without recording successful receipts
+  ---
+  duration_ms: 45.875
+  ...
+# Subtest: child routing denies wrong namespace without recording successful receipts
+ok 11 - child routing denies wrong namespace without recording successful receipts
+  ---
+  duration_ms: 45.911
+  ...
+# Subtest: child routing denies missing namespace without recording successful receipts
+ok 12 - child routing denies missing namespace without recording successful receipts
+  ---
+  duration_ms: 45.2155
+  ...
+# Subtest: child routing denies failed call without recording successful receipts
+ok 13 - child routing denies failed call without recording successful receipts
+  ---
+  duration_ms: 43.5089
+  ...
+# Subtest: child routing denies failed result without recording successful receipts
+ok 14 - child routing denies failed result without recording successful receipts
+  ---
+  duration_ms: 34.7526
+  ...
+# Subtest: child routing denies failed result status without recording successful receipts
+ok 15 - child routing denies failed result status without recording successful receipts
+  ---
+  duration_ms: 37.4835
+  ...
+# Subtest: child routing denies error result envelope without recording successful receipts
+ok 16 - child routing denies error result envelope without recording successful receipts
+  ---
+  duration_ms: 36.243
+  ...
+# Subtest: child routing denies nested result without recording successful receipts
+ok 17 - child routing denies nested result without recording successful receipts
+  ---
+  duration_ms: 39.5888
+  ...
+# Subtest: child routing denies duplicate call without recording successful receipts
+ok 18 - child routing denies duplicate call without recording successful receipts
+  ---
+  duration_ms: 48.4778
+  ...
+# Subtest: child routing denies duplicate result without recording successful receipts
+ok 19 - child routing denies duplicate result without recording successful receipts
+  ---
+  duration_ms: 36.788
+  ...
+# Subtest: child routing denies wrong call ID without recording successful receipts
+ok 20 - child routing denies wrong call ID without recording successful receipts
+  ---
+  duration_ms: 47.175
+  ...
+# Subtest: child routing denies wrong child without recording successful receipts
+ok 21 - child routing denies wrong child without recording successful receipts
+  ---
+  duration_ms: 40.4051
+  ...
+# Subtest: child routing denies ambiguous dispatch without recording successful receipts
+ok 22 - child routing denies ambiguous dispatch without recording successful receipts
+  ---
+  duration_ms: 45.775
+  ...
+# Subtest: child routing rejects missing parent
+ok 23 - child routing rejects missing parent
+  ---
+  duration_ms: 12.5842
+  ...
+# Subtest: child routing rejects sibling or grandparent
+ok 24 - child routing rejects sibling or grandparent
+  ---
+  duration_ms: 20.882
+  ...
+# Subtest: child routing rejects self parent
+ok 25 - child routing rejects self parent
+  ---
+  duration_ms: 14.5687
+  ...
+# Subtest: child routing rejects invalid parent
+ok 26 - child routing rejects invalid parent
+  ---
+  duration_ms: 9.6972
+  ...
+# Subtest: unobserved dispatch alias multi_agent_v1.spawn_agent is rejected
+ok 27 - unobserved dispatch alias multi_agent_v1.spawn_agent is rejected
+  ---
+  duration_ms: 44.2141
+  ...
+# Subtest: unobserved dispatch alias multi_agent_v1spawn_agent is rejected
+ok 28 - unobserved dispatch alias multi_agent_v1spawn_agent is rejected
+  ---
+  duration_ms: 38.2238
+  ...
+# Subtest: child routing rejects absent or ambiguous parent files
+ok 29 - child routing rejects absent or ambiguous parent files
+  ---
+  duration_ms: 13.2622
+  ...
+# Subtest: child routing rejects workspace-supplied transcripts outside the native source root
+ok 30 - child routing rejects workspace-supplied transcripts outside the native source root
+  ---
+  duration_ms: 9.5037
+  ...
+# Subtest: child routing rejects wrong-project parent source
+ok 31 - child routing rejects wrong-project parent source
+  ---
+  duration_ms: 18.7105
+  ...
+# Subtest: child routing rejects wrong-project child source
+ok 32 - child routing rejects wrong-project child source
+  ---
+  duration_ms: 13.7434
+  ...
+# Subtest: child routing honors existing parent checkpoint and preserves evidence of a rewrite
+ok 33 - child routing honors existing parent checkpoint and preserves evidence of a rewrite
+  ---
+  duration_ms: 35.558
+  ...
+# Subtest: binding rejects parent source rewrite between resolve and receipt commit
+ok 34 - binding rejects parent source rewrite between resolve and receipt commit
+  ---
+  duration_ms: 34.8735
+  ...
+# Subtest: binding rejects child source rewrite between resolve and receipt commit
+ok 35 - binding rejects child source rewrite between resolve and receipt commit
+  ---
+  duration_ms: 36.9243
+  ...
+# Subtest: binding rechecks child parent metadata at commit
+ok 36 - binding rechecks child parent metadata at commit
+  ---
+  duration_ms: 40.4933
+  ...
+# Subtest: binding permits complete append-only parent and child updates without inheriting activation
+ok 37 - binding permits complete append-only parent and child updates without inheriting activation
+  ---
+  duration_ms: 56.9108
+  ...
+# Subtest: binding rejects partial parent source tails before committing a receipt
+ok 38 - binding rejects partial parent source tails before committing a receipt
+  ---
+  duration_ms: 41.2417
+  ...
+# Subtest: binding rejects partial child source tails before committing a receipt
+ok 39 - binding rejects partial child source tails before committing a receipt
+  ---
+  duration_ms: 44.3383
+  ...
+# Subtest: binding rejects newly ambiguous dispatch appended after resolution
+ok 40 - binding rejects newly ambiguous dispatch appended after resolution
+  ---
+  duration_ms: 41.4647
+  ...
+# Subtest: confirmed sibling cannot confirm or authorize another child
+ok 41 - confirmed sibling cannot confirm or authorize another child
+  ---
+  duration_ms: 295.0333
+  ...
+# Subtest: child routing fails closed on partial-json in existing parent audit events
+ok 42 - child routing fails closed on partial-json in existing parent audit events
+  ---
+  duration_ms: 45.2173
+  ...
+# Subtest: child routing fails closed on valid-json-tamper in existing parent audit events
+ok 43 - child routing fails closed on valid-json-tamper in existing parent audit events
+  ---
+  duration_ms: 40.3533
+  ...
+# Subtest: previously checkpointed parent truncation to metadata is rejected before binding receipts
+ok 44 - previously checkpointed parent truncation to metadata is rejected before binding receipts
+  ---
+  duration_ms: 66.2126
+  ...
+# Subtest: previously checkpointed parent truncation to empty is rejected before binding receipts
+ok 45 - previously checkpointed parent truncation to empty is rejected before binding receipts
+  ---
+  duration_ms: 62.5107
+  ...
+# Subtest: previously checkpointed child truncation to metadata is rejected before binding receipts
+ok 46 - previously checkpointed child truncation to metadata is rejected before binding receipts
+  ---
+  duration_ms: 70.0353
+  ...
+# Subtest: previously checkpointed child truncation to empty is rejected before binding receipts
+ok 47 - previously checkpointed child truncation to empty is rejected before binding receipts
+  ---
+  duration_ms: 53.5196
+  ...
+# Subtest: binding detects parent truncation below its resolved prefix
+ok 48 - binding detects parent truncation below its resolved prefix
+  ---
+  duration_ms: 44.2568
+  ...
+# Subtest: binding detects child truncation below its resolved prefix
+ok 49 - binding detects child truncation below its resolved prefix
+  ---
+  duration_ms: 41.0386
+  ...
+# Subtest: binding logs do not copy unrelated parent or sibling content into child output
+ok 50 - binding logs do not copy unrelated parent or sibling content into child output
+  ---
+  duration_ms: 139.4307
+  ...
+# Subtest: binding accepts historical normalized events without rewriting them after namespace support
+ok 51 - binding accepts historical normalized events without rewriting them after namespace support
+  ---
+  duration_ms: 63.9423
+  ...
+# Subtest: whitelist excludes internal context and preserves Unicode annotations and multiline order
+ok 52 - whitelist excludes internal context and preserves Unicode annotations and multiline order
+  ---
+  duration_ms: 48.8509
+  ...
+# Subtest: redacts known credentials recursively including CLI, headers, URLs, JSON and errors
+ok 53 - redacts known credentials recursively including CLI, headers, URLs, JSON and errors
+  ---
+  duration_ms: 0.8465
+  ...
+# Subtest: sanitizes before artifact writes, verifies artifacts and recreates derived transcript
+ok 54 - sanitizes before artifact writes, verifies artifacts and recreates derived transcript
+  ---
+  duration_ms: 87.43
+  ...
+# Subtest: idempotent append, checkpoint recovery after crash and concurrent sync
+ok 55 - idempotent append, checkpoint recovery after crash and concurrent sync
+  ---
+  duration_ms: 194.6729
+  ...
+# Subtest: partial source line is deferred, malformed and unknown data fail closed with explicit gaps
+ok 56 - partial source line is deferred, malformed and unknown data fail closed with explicit gaps
+  ---
+  duration_ms: 92.0105
+  ...
+# Subtest: source rewrites and output corruption are detected without erasing logs
+ok 57 - source rewrites and output corruption are detected without erasing logs
+  ---
+  duration_ms: 70.1438
+  ...
+# Subtest: changing session date cannot evade existing checkpoint by creating another date directory
+ok 58 - changing session date cannot evade existing checkpoint by creating another date directory
+  ---
+  duration_ms: 44.5544
+  ...
+# Subtest: unknown visible content and legacy message events block instead of silently dropping conversation
+ok 59 - unknown visible content and legacy message events block instead of silently dropping conversation
+  ---
+  duration_ms: 73.3163
+  ...
+# Subtest: rejects wrong session, wrong project and native path escape
+ok 60 - rejects wrong session, wrong project and native path escape
+  ---
+  duration_ms: 17.9566
+  ...
+# Subtest: rejects output directory junction escape
+ok 61 - rejects output directory junction escape
+  ---
+  duration_ms: 13.3853
+  ...
+# Subtest: reports attachment, hosted tool and truncation gaps, not invented completeness
+ok 62 - reports attachment, hosted tool and truncation gaps, not invented completeness
+  ---
+  duration_ms: 51.1534
+  ...
+# Subtest: stale lock fails closed, never deletes another process lock
+ok 63 - stale lock fails closed, never deletes another process lock
+  ---
+  duration_ms: 101.603
+  ...
+# Subtest: hooks fail closed, allow only narrowly bounded diagnostics, and require real canary confirmation
+ok 64 - hooks fail closed, allow only narrowly bounded diagnostics, and require real canary confirmation
+  ---
+  duration_ms: 122.5737
+  ...
+# Subtest: hook prompt/tool/final receipts survive native flush delay, are idempotent and confirmable
+ok 65 - hook prompt/tool/final receipts survive native flush delay, are idempotent and confirmable
+  ---
+  duration_ms: 251.2988
+  ...
+# Subtest: Git ignores logs in temporary repository; Docker rules exclude local audit and secrets
+ok 66 - Git ignores logs in temporary repository; Docker rules exclude local audit and secrets
+  ---
+  duration_ms: 164.6215
+  ...
+# Subtest: portable launcher resolves from subdirectories without Git, preserving stdin and deny output
+ok 67 - portable launcher resolves from subdirectories without Git, preserving stdin and deny output
+  ---
+  duration_ms: 177.4861
+  ...
+# Subtest: template and fixture-generated configuration cover all events with bounded terminal timeouts
+ok 68 - template and fixture-generated configuration cover all events with bounded terminal timeouts
+  ---
+  duration_ms: 91.2499
+  ...
+# Subtest: configured shell launcher distinguishes malformed JSON, unknown envelopes and invalid PreToolUse fields
+ok 69 - configured shell launcher distinguishes malformed JSON, unknown envelopes and invalid PreToolUse fields
+  ---
+  duration_ms: 1513.1499
+  ...
+# Subtest: health diagnostic reads allow only the current session and reject escapes and shell composition
+ok 70 - health diagnostic reads allow only the current session and reject escapes and shell composition
+  ---
+  duration_ms: 0.4175
+  ...
+# Subtest: health API appends whitelisted lifecycle records without exporting hook content
+ok 71 - health API appends whitelisted lifecycle records without exporting hook content
+  ---
+  duration_ms: 32.8707
+  ...
+# Subtest: adversarial metadata cannot choose health paths or leak content through whitelisted fields
+ok 72 - adversarial metadata cannot choose health paths or leak content through whitelisted fields
+  ---
+  duration_ms: 92.0716
+  ...
+# Subtest: successful hook verification emits received then verified and preserves a real fixture receipt
+ok 73 - successful hook verification emits received then verified and preserves a real fixture receipt
+  ---
+  duration_ms: 60.1012
+  ...
+# Subtest: blocking native corruption preserves observation receipts without verification or canary activation
+ok 74 - blocking native corruption preserves observation receipts without verification or canary activation
+  ---
+  duration_ms: 106.6559
+  ...
+# Subtest: unknown handler envelopes advise failure while invalid PreToolUse fields explicitly deny
+ok 75 - unknown handler envelopes advise failure while invalid PreToolUse fields explicitly deny
+  ---
+  duration_ms: 234.3402
+  ...
+# Subtest: missing fixture source fails before any observation receipt can be appended
+ok 76 - missing fixture source fails before any observation receipt can be appended
+  ---
+  duration_ms: 36.5812
+  ...
+# Subtest: health write failure denies mutation before native verification creates receipts
+ok 77 - health write failure denies mutation before native verification creates receipts
+  ---
+  duration_ms: 24.5779
+  ...
+# Subtest: descendant directory links never write outside the fixed trusted fixture project
+ok 78 - descendant directory links never write outside the fixed trusted fixture project
+  ---
+  duration_ms: 36.6218
+  ...
+# Subtest: links occupying health output-file paths are rejected before append (Windows junction; POSIX file symlink)
+ok 79 - links occupying health output-file paths are rejected before append (Windows junction; POSIX file symlink)
+  ---
+  duration_ms: 18.9943
+  ...
+# Fixture: NTFS directory junction at the health output-file path; regular Windows file symlinks are not exercised.
+# Subtest: cwd resolving outside the trusted project is denied without touching the outside directory
+ok 80 - cwd resolving outside the trusted project is denied without touching the outside directory
+  ---
+  duration_ms: 48.0713
+  ...
+# Subtest: canary gate denial remains distinct from successful native verification
+ok 81 - canary gate denial remains distinct from successful native verification
+  ---
+  duration_ms: 67.9157
+  ...
+1..81
+# tests 81
+# suites 0
+# pass 81
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6985.3083
+

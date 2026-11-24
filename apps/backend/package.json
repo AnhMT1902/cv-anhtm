@@ -1,0 +1,35 @@
+{
+  "name": "@cv/backend",
+  "private": true,
+  "scripts": {
+    "generate": "prisma generate",
+    "migrate": "prisma migrate deploy",
+    "prebuild": "npm run generate",
+    "pretypecheck": "npm run generate",
+    "pretest": "npm run generate",
+    "dev": "npm run build && node dist/main.js",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc -p tsconfig.test.json && node --test dist-test/test/*.test.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "@prisma/adapter-pg": "7.10.1",
+    "@prisma/client": "7.10.1",
+    "cheerio": "1.2.0",
+    "fflate": "0.8.3",
+    "jsonresume-theme-sidebar": "0.2.14",
+    "postcss": "8.5.23",
+    "postcss-selector-parser": "7.2.1",
+    "postcss-value-parser": "4.2.0",
+    "prisma": "7.10.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.0",
+    "yauzl": "3.4.0"
+  },
+  "devDependencies": {
+    "@types/yauzl": "3.4.0"
+  }
+}

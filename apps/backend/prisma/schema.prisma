@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client"
+  output = "../src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Template {
+  id        String   @id @db.Uuid
+  name      String   @db.VarChar(100)
+  markup    String
+  css       String
+  archive   Bytes
+  createdAt DateTime @default(now()) @db.Timestamptz(3)
+  selections TemplateSelection[]
+
+  @@map("templates")
+}
+
+model TemplateSelection {
+  key        String    @id @db.VarChar(20)
+  templateId String?   @db.Uuid
+  template   Template? @relation(fields: [templateId], references: [id], onDelete: Restrict)
+
+  @@index([templateId])
+  @@map("template_selection")
+}
+
+model AdminSession {
+  tokenHash String   @id @db.Char(64)
+  expiresAt DateTime @db.Timestamptz(3)
+
+  @@index([expiresAt])
+  @@map("admin_sessions")
+}
+
+model CvContent {
+  key         String   @id @db.VarChar(20)
+  draft       Json
+  publishedVi Json
+  publishedEn Json
+  revision    Int      @default(1)
+
+  @@map("cv_content")
+}

@@ -1,0 +1,53 @@
+/* Adapted from Start Bootstrap Resume v7.0.6, MIT. */
+.resume {
+  --resume-accent: #a94d31;
+  --resume-ink: #222b32;
+  background: #fbfaf6;
+  color: var(--resume-ink);
+  font-family: "Instrument Sans", "Segoe UI", sans-serif;
+  line-height: 1.55;
+}
+.resume * { box-sizing: border-box; }
+.resume-sidebar { padding: 1rem; background: var(--resume-accent); color: #fff; }
+#sideNav { display: flex; gap: .4rem 1rem; flex-wrap: wrap; }
+#sideNav a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#sideNav a:hover { text-decoration: underline; }
+.resume-main { min-width: 0; }
+section.resume-section {
+  display: flex;
+  align-items: center;
+  padding: clamp(1.5rem, 6vw, 5rem);
+  border-bottom: 1px solid #e5ddd5;
+  scroll-margin-top: 1rem;
+}
+.resume-section-content { width: 100%; max-width: 74rem; overflow-wrap: anywhere; }
+.resume h1, .resume h2 { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; line-height: 1; margin: 0 0 .52em; }
+.resume h1 { font-size: clamp(3rem, 8vw, 7rem); }
+.resume h2 { font-size: clamp(2.2rem, 5vw, 4rem); }
+.resume h3 { margin: 0; font-size: 1.1rem; }
+.resume p { margin: .25rem 0 .55rem; }
+.resume p.cv-role, .resume .cv-dates { color: #934528; font-weight: 700; }
+.resume-intro .resume-section-content > p:last-child { max-width: 58ch; font-size: clamp(1.05rem, 2vw, 1.24rem); }
+.resume-projects .resume-section-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: .8rem; }
+.resume-projects h2 { grid-column: 1 / -1; }
+.resume-projects article { border: 1px solid #e5ddd5; border-top: 3px solid var(--resume-accent); padding: 1rem; background: #fff; }
+.cv-skills { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; }
+.cv-skills li { border: 1px solid #e5ddd5; border-radius: 2rem; padding: .28rem .65rem; }
+.resume address { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; font-style: normal; }
+.resume address p { flex-basis: 100%; }
+@media (min-width: 60rem) {
+  .resume { display: grid; grid-template-columns: 15rem minmax(0, 1fr); }
+  .resume-sidebar { padding: 4rem 1.6rem; }
+  #sideNav { flex-direction: column; }
+  section.resume-intro { min-height: min(37rem, 74vh); }
+}

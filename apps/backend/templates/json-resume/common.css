@@ -1,0 +1,35 @@
+.jr {
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-width: 68rem;
+  overflow-wrap: anywhere;
+  background: var(--jr-paper, white);
+  color: var(--jr-ink, #182534);
+  font: 1rem/1.58 "Instrument Sans", "Trebuchet MS", sans-serif;
+}
+.jr h1, .jr h2, .jr h3, .jr p { margin: 0; }
+.jr h1 { font-size: clamp(1.9rem, 5vw, 3.2rem); line-height: 1.08; }
+.jr h2 { font-size: 1.3rem; line-height: 1.3; margin-bottom: .75rem; }
+.jr h3 { font-size: 1rem; margin-bottom: .1rem; }
+.jr p + p, .jr h1 + p { margin-top: .5rem; }
+.jr section + section { margin-top: 1.6rem; }
+.jr article + article { margin-top: 1rem; }
+.jr .cv-role, .jr .cv-dates { color: var(--jr-muted, #42576b); }
+.jr ul { padding-inline-start: 1.2rem; }
+.jr a { color: inherit; text-underline-offset: .2em; }
+.jr address { display: grid; font-style: normal; gap: .35rem; }
+.jr nav { display: flex; flex-wrap: wrap; margin-top: 1.2rem; gap: .4rem 1rem; }
+.jr nav a { font-size: .875rem; }
+.jr img[data-cv-portrait] {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  max-width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.jr-main, .jr-side { min-width: 0; padding: clamp(1.15rem, 4vw, 2.9rem); }
+@media (min-width: 48rem) {
+  .jr-columns { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.05fr); }
+}

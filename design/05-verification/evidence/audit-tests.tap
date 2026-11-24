@@ -1,0 +1,162 @@
+TAP version 13
+# Subtest: whitelist excludes internal context and preserves Unicode annotations and multiline order
+ok 1 - whitelist excludes internal context and preserves Unicode annotations and multiline order
+  ---
+  duration_ms: 49.3572
+  ...
+# Subtest: redacts known credentials recursively including CLI, headers, URLs, JSON and errors
+ok 2 - redacts known credentials recursively including CLI, headers, URLs, JSON and errors
+  ---
+  duration_ms: 0.445
+  ...
+# Subtest: sanitizes before artifact writes, verifies artifacts and recreates derived transcript
+ok 3 - sanitizes before artifact writes, verifies artifacts and recreates derived transcript
+  ---
+  duration_ms: 74.8989
+  ...
+# Subtest: idempotent append, checkpoint recovery after crash and concurrent sync
+ok 4 - idempotent append, checkpoint recovery after crash and concurrent sync
+  ---
+  duration_ms: 172.1957
+  ...
+# Subtest: partial source line is deferred, malformed and unknown data fail closed with explicit gaps
+ok 5 - partial source line is deferred, malformed and unknown data fail closed with explicit gaps
+  ---
+  duration_ms: 78.5295
+  ...
+# Subtest: source rewrites and output corruption are detected without erasing logs
+ok 6 - source rewrites and output corruption are detected without erasing logs
+  ---
+  duration_ms: 57.0307
+  ...
+# Subtest: changing session date cannot evade existing checkpoint by creating another date directory
+ok 7 - changing session date cannot evade existing checkpoint by creating another date directory
+  ---
+  duration_ms: 34.7739
+  ...
+# Subtest: unknown visible content and legacy message events block instead of silently dropping conversation
+ok 8 - unknown visible content and legacy message events block instead of silently dropping conversation
+  ---
+  duration_ms: 41.557
+  ...
+# Subtest: rejects wrong session, wrong project and native path escape
+ok 9 - rejects wrong session, wrong project and native path escape
+  ---
+  duration_ms: 13.1955
+  ...
+# Subtest: rejects output directory junction escape
+ok 10 - rejects output directory junction escape
+  ---
+  duration_ms: 8.7869
+  ...
+# Subtest: reports attachment, hosted tool and truncation gaps, not invented completeness
+ok 11 - reports attachment, hosted tool and truncation gaps, not invented completeness
+  ---
+  duration_ms: 37.9704
+  ...
+# Subtest: stale lock fails closed, never deletes another process lock
+ok 12 - stale lock fails closed, never deletes another process lock
+  ---
+  duration_ms: 57.0877
+  ...
+# Subtest: hooks fail closed, allow only narrowly bounded diagnostics, and require real canary confirmation
+ok 13 - hooks fail closed, allow only narrowly bounded diagnostics, and require real canary confirmation
+  ---
+  duration_ms: 101.6557
+  ...
+# Subtest: hook prompt/tool/final receipts survive native flush delay, are idempotent and confirmable
+ok 14 - hook prompt/tool/final receipts survive native flush delay, are idempotent and confirmable
+  ---
+  duration_ms: 201.0109
+  ...
+# Subtest: Git ignores logs in temporary repository; Docker rules exclude local audit and secrets
+ok 15 - Git ignores logs in temporary repository; Docker rules exclude local audit and secrets
+  ---
+  duration_ms: 165.6585
+  ...
+# Subtest: portable launcher resolves from subdirectories without Git, preserving stdin and deny output
+ok 16 - portable launcher resolves from subdirectories without Git, preserving stdin and deny output
+  ---
+  duration_ms: 192.3619
+  ...
+# Subtest: template and fixture-generated configuration cover all events with bounded terminal timeouts
+ok 17 - template and fixture-generated configuration cover all events with bounded terminal timeouts
+  ---
+  duration_ms: 64.0815
+  ...
+# Subtest: configured shell launcher distinguishes malformed JSON, unknown envelopes and invalid PreToolUse fields
+ok 18 - configured shell launcher distinguishes malformed JSON, unknown envelopes and invalid PreToolUse fields
+  ---
+  duration_ms: 1416.1213
+  ...
+# Subtest: health diagnostic reads allow only the current session and reject escapes and shell composition
+ok 19 - health diagnostic reads allow only the current session and reject escapes and shell composition
+  ---
+  duration_ms: 0.5455
+  ...
+# Subtest: health API appends whitelisted lifecycle records without exporting hook content
+ok 20 - health API appends whitelisted lifecycle records without exporting hook content
+  ---
+  duration_ms: 32.3458
+  ...
+# Subtest: adversarial metadata cannot choose health paths or leak content through whitelisted fields
+ok 21 - adversarial metadata cannot choose health paths or leak content through whitelisted fields
+  ---
+  duration_ms: 96.2317
+  ...
+# Subtest: successful hook verification emits received then verified and preserves a real fixture receipt
+ok 22 - successful hook verification emits received then verified and preserves a real fixture receipt
+  ---
+  duration_ms: 38.2325
+  ...
+# Subtest: blocking native corruption preserves observation receipts without verification or canary activation
+ok 23 - blocking native corruption preserves observation receipts without verification or canary activation
+  ---
+  duration_ms: 110.796
+  ...
+# Subtest: unknown handler envelopes advise failure while invalid PreToolUse fields explicitly deny
+ok 24 - unknown handler envelopes advise failure while invalid PreToolUse fields explicitly deny
+  ---
+  duration_ms: 335.7915
+  ...
+# Subtest: missing fixture source fails before any observation receipt can be appended
+ok 25 - missing fixture source fails before any observation receipt can be appended
+  ---
+  duration_ms: 49.9959
+  ...
+# Subtest: health write failure denies mutation before native verification creates receipts
+ok 26 - health write failure denies mutation before native verification creates receipts
+  ---
+  duration_ms: 15.1697
+  ...
+# Subtest: descendant directory links never write outside the fixed trusted fixture project
+ok 27 - descendant directory links never write outside the fixed trusted fixture project
+  ---
+  duration_ms: 50.7846
+  ...
+# Subtest: links occupying health output-file paths are rejected before append (Windows junction; POSIX file symlink)
+ok 28 - links occupying health output-file paths are rejected before append (Windows junction; POSIX file symlink)
+  ---
+  duration_ms: 24.283
+  ...
+# Fixture: NTFS directory junction at the health output-file path; regular Windows file symlinks are not exercised.
+# Subtest: cwd resolving outside the trusted project is denied without touching the outside directory
+ok 29 - cwd resolving outside the trusted project is denied without touching the outside directory
+  ---
+  duration_ms: 65.999
+  ...
+# Subtest: canary gate denial remains distinct from successful native verification
+ok 30 - canary gate denial remains distinct from successful native verification
+  ---
+  duration_ms: 88.3872
+  ...
+1..30
+# tests 30
+# suites 0
+# pass 30
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3766.6243
+

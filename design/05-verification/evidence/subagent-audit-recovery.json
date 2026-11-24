@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "taskId": "AUDIT-SUBAGENT-20261121",
+  "generatedAt": "2026-11-21T08:41:56.917Z",
+  "runtime": {
+    "node": "v20.19.6",
+    "platform": "win32",
+    "architecture": "x64"
+  },
+  "approval": "User explicitly approved bounded sub-agent audit recovery",
+  "baseline": {
+    "sandbox": {
+      "passed": 27,
+      "failed": 3
+    },
+    "outsideSandbox": {
+      "passed": 30,
+      "failed": 0,
+      "syntaxChecks": 10
+    }
+  },
+  "staged": {
+    "passed": 81,
+    "failed": 0,
+    "skipped": 0,
+    "syntaxChecks": 10,
+    "sourceSha256": {
+      "scripts/ai-audit/audit.mjs": "010b48d20f1bc75b0e66098f21a352e78bebb082db745db4926685936a5fe4a2",
+      "scripts/ai-audit/check.mjs": "8a550d55ec4066d50bf1e619be2c0dc43c189c65a1147ea8f5ee3bf11b43b75c",
+      "scripts/ai-audit/cli.mjs": "bbf8c63931d05c9bf9aa72bc2790caec0f1665e5f8314ce300b14bbd70b5dd30",
+      "scripts/ai-audit/health.mjs": "669ba460092e3d6ac99112832694332fe9b99b30b15aa3c7deb8811b7f6819eb",
+      "scripts/ai-audit/hook.mjs": "75a3e8d58787780352c795700950e1ad4d3b33d3511206f1ea1ba280dd174fe2",
+      "scripts/ai-audit/paths.mjs": "03f32ed95c1260b702b2d01e819f8ac5bcedac77a4d4188da07c811ef7e76ff1",
+      "scripts/ai-audit/prepare-hooks.mjs": "b22a233fefc63df1301cc859ecedabd2f7f78c510b4c7d790462ef0b49297409",
+      "scripts/ai-audit/redact.mjs": "273b0ae87b2d34ea4d18d17d89666eb25c51cde0540ed145b6cdeb8625bef51f",
+      "scripts/ai-audit/source.mjs": "f5f21c8a7af331148c9cab15f43fa0abd308832cd150dc5c3f1fb7ab96505781",
+      "scripts/ai-audit/tests/audit.test.mjs": "1cfb206f7099e0cb4d5ba12f8787d561a6c8e3ae55f57702de376c9b1c93b582"
+    },
+    "testEvidenceSha256": "2cabbb9629977752b199acc451f5ead2d5247558e6c237c276497206c0b28bbb"
+  },
+  "expectedFingerprint": "086809605de2e8f9b87162fbe1e74fda78591cf9e57d4882a1ab21ade5749ce2",
+  "promotion": "applied_byte_identical_to_tested_staged_sources",
+  "liveDesktopCanary": "pending_new_fingerprint_and_user_confirmation",
+  "liveChildRouting": "pending_real_subagent",
+  "childCanary": "pending_separate_user_confirmation",
+  "playwright": "approved_not_applicable_no_application_UI",
+  "applicationBuild": "approved_not_applicable_no_application",
+  "ubuntu": "not_run",
+  "deployment": "not_performed",
+  "backupDirectory": "logs/ai/recovery/2026-11-21-subagent-audit/before",
+  "limitations": [
+    "Fixtures are not automatic desktop receipts",
+    "Review agents evaluated supplied code/design without tool access",
+    "No atomic OS race-free or hostile local-owner guarantee",
+    "Direct-parent native dispatch shape only",
+    "Parent canary is never inherited by child"
+  ],
+  "promotedAt": "2026-11-21T08:44:09.6250156Z",
+  "promotedSha256": {
+    "scripts/ai-audit/source.mjs": "f5f21c8a7af331148c9cab15f43fa0abd308832cd150dc5c3f1fb7ab96505781",
+    "scripts/ai-audit/audit.mjs": "010b48d20f1bc75b0e66098f21a352e78bebb082db745db4926685936a5fe4a2",
+    "scripts/ai-audit/hook.mjs": "75a3e8d58787780352c795700950e1ad4d3b33d3511206f1ea1ba280dd174fe2",
+    "scripts/ai-audit/tests/audit.test.mjs": "1cfb206f7099e0cb4d5ba12f8787d561a6c8e3ae55f57702de376c9b1c93b582"
+  },
+  "promotionNote": "Initial combined patch exceeded Windows command-line length without editing runtime; retried as test-only and runtime-only patches."
+}

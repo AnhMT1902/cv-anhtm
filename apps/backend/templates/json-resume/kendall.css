@@ -1,0 +1,9 @@
+.jr-kendall { --jr-ink: #263749; --jr-muted: #415e78; }
+.jr-kendall header { border-top: .35rem solid #28678d; border-bottom: 1px solid #cddce5; }
+.jr-kendall aside { background: #eef5f8; }
+.jr-kendall h2 { color: #235c81; }
+.jr-kendall .jr-main article + article { padding-top: .75rem; border-top: 1px solid #d5e2e9; }
+@media (min-width: 48rem) {
+  .jr-kendall .jr-columns { grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr); }
+  .jr-kendall header img { float: right; margin-inline-start: 1rem; }
+}

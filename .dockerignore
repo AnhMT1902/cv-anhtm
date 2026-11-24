@@ -1,0 +1,17 @@
+logs
+logs/**
+.audit-test-output
+.audit-test-output/**
+.git
+.env
+.env.*
+node_modules
+**/node_modules
+**/.next
+**/dist
+**/dist-test
+**/*.tsbuildinfo
+**/next-env.d.ts
+apps/backend/src/generated
+playwright-report
+test-results

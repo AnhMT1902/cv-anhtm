@@ -1,0 +1,17 @@
+/logs/
+/.audit-test-output/
+.env
+.env.*
+!.env.example
+node_modules/
+.next/
+dist/
+dist-test/
+*.tsbuildinfo
+next-env.d.ts
+playwright-report/
+test-results/
+apps/backend/src/generated/
+.DS_Store
+Thumbs.db
+.codex
